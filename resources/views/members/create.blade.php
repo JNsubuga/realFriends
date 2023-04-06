@@ -11,7 +11,7 @@
     </x-slot>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
+    
     <!-- Validation Errors -->
     {{-- <x-auth-validation-errors class="mb-4" :errors="$errors" /> --}}
     <div class="max-w-3xl mx-auto sm:px-6 lg:px-8 pt-4 w-1/3">
