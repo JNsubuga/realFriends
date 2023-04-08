@@ -9,7 +9,7 @@ class Transaction extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['txnDate', 'account_id', 'member_id', 'Dr', 'Cr', 'balanceBalance'];
+    protected $fillable = ['txnDate', 'account_id', 'member_id', 'event_id', 'Dr', 'Cr', 'balanceBefore'];
 
     public function scopeFilter($query, array $filters)
     {
