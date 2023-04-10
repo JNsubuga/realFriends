@@ -62,7 +62,8 @@ class AccountsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $toUpdate = Account::where('id', $id)->first();
+        return view('accounts.edit', ['toUpdate' => $toUpdate]);
     }
 
     /**
@@ -70,7 +71,15 @@ class AccountsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $formFields = $request->validate([
+            'Name' => 'required',
+            'year' => 'required',
+            'Code' => 'required',
+            'AnualPrinciple' => 'required'
+        ]);
+        Account::where('id', $id)->update($formFields);
+
+        return redirect(route('account.index'))->with('Success', 'Account Updated Successfully!!');
     }
 
     /**

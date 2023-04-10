@@ -20,16 +20,16 @@ class Transaction extends Model
 
     public function event()
     {
-        return $this->belongsTo(Event::class, 'events');
+        return $this->belongsTo(Event::class, 'event_id');
     }
 
     public function member()
     {
-        return $this->belongsTo(Member::class, 'members');
+        return $this->belongsTo(Member::class, 'member_id');
     }
 
     public function account()
     {
-        return $this->belongsTo(Account::class, 'accounts');
+        return $this->belongsTo(Account::class, 'account_id');
     }
 }
