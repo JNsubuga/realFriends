@@ -20,7 +20,7 @@ class Member extends Model
 
     public function member_profiles()
     {
-        return $this->hasOne(MemberProfile::class, 'member_profiles');
+        return $this->hasOne(MemberProfile::class);
     }
 
     public function nok()
@@ -30,6 +30,6 @@ class Member extends Model
 
     public function transactions()
     {
-        return $this->hasMany(Transaction::class, 'transactions');
+        return $this->hasMany(Transaction::class);
     }
 }
