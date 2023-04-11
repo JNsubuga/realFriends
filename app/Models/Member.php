@@ -18,15 +18,15 @@ class Member extends Model
         }
     }
 
-    public function member_profiles()
-    {
-        return $this->hasOne(MemberProfile::class);
-    }
+    // public function member_profile()
+    // {
+    //     return $this->hasOne(MemberProfile::class);
+    // }
 
-    public function nok()
-    {
-        return $this->hasOne('');
-    }
+    // public function nok()
+    // {
+    //     return $this->hasOne(Nok::class);
+    // }
 
     public function transactions()
     {
